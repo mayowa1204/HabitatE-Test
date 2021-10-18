@@ -36,8 +36,8 @@ Create a database connection in MySQL
 Please do not forget to set up a database connection in MySQL and input the details in database.py before running $ python database.py
 $ python database.py
 
-You can run this and it will automatically run the entire project and save to the database
+To start the server
 $ python main.py
 
-Alternatively, you can run the test file itsself.
+Go to localhost:5000/aunctions to run the functions. Alternatively, you can run the test file itsself.
 $ python aunction.py

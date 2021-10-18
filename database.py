@@ -1,14 +1,18 @@
 import mysql.connector
 
 def create_database():
- db = mysql.connector.connect(
-    host="localhost",
-    user="Mayowa", 
-    password = "oseni1234",
-)
- mycursor = db.cursor()
- mycursor.execute("CREATE DATABASE testdb") 
-print("Database created successfully")
+    try:
+        db = mysql.connector.connect(
+            host="localhost",
+            user="Mayowa", 
+            password = "oseni1234",
+        )
+        mycursor = db.cursor()
+        mycursor.execute("CREATE DATABASE testdb") 
+       
+    except ConnectionError as exc:
+      raise RuntimeError('Failed to connect to database') from exc
+            
 
 create_database()
   
